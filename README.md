@@ -75,8 +75,8 @@
 
 ## 回溯
 
-* 利用回溯算法求解八皇后问题
-* 利用回溯算法求解0-1背包问题
+* [利用回溯算法求解八皇后问题](https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/EightQueen.java)
+* [利用回溯算法求解 0-1 背包问题](https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/Package.java)
 
 ## 分治
 
