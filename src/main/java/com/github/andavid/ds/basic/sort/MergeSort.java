@@ -6,41 +6,38 @@ public class MergeSort {
     mergeSort(data, 0, data.length - 1);
   }
 
-  public void mergeSort(int[] data, int start, int end) {
-    if (start >= end) return;
-    int mid = start + (end - start) / 2;
-    mergeSort(data, start, mid);
-    mergeSort(data, mid+1, end);
-    merge(data, start, mid, end);
+  public void mergeSort(int[] data, int low, int high) {
+    if (low >= high) return;
+    int mid = low + (high - low) / 2;
+    mergeSort(data, low, mid);
+    mergeSort(data, mid + 1, high);
+    merge(data, low, mid, high);
   }
 
-  public void merge(int[] data, int start, int mid, int end) {
-    int[] tempData = new int[end - start + 1];
-    int tempIndex = 0;
-    int leftIndex = start;
-    int rightIndex = mid + 1;
+  public void merge(int[] data, int low, int mid, int high) {
+    int[] temp = new int[high - low + 1];
+    int i = low;
+    int j = mid + 1;
+    int k = 0;
 
-    while (leftIndex <= mid && rightIndex <= end) {
-      if (data[leftIndex] < data[rightIndex]) {
-        tempData[tempIndex++] = data[leftIndex++];
+    while (i <= mid && j <= high) {
+      if (data[i] < data[j]) {
+        temp[k++] = data[i++];
       } else {
-        tempData[tempIndex++] = data[rightIndex++];
+        temp[k++] = data[j++];
       }
     }
 
-    int copyStartIndex = leftIndex;
-    int copyEndIndex = mid;
-    if (rightIndex <= end) {
-      copyStartIndex = rightIndex;
-      copyEndIndex = end;
+    while (i <= mid) {
+      temp[k++] = data[i++];
     }
 
-    while (copyStartIndex <= copyEndIndex) {
-      tempData[tempIndex++] = data[copyStartIndex++];
+    while (j <= high) {
+      temp[k++] = data[j++];
     }
 
-    for (int i = start; i <= end; i++) {
-      data[i] = tempData[i-start];
+    for (int l = 0; l < temp.length; l++) {
+      data[low + l] = temp[l];
     }
   }
 
