@@ -6,23 +6,23 @@ public class QuickSort {
     quicksort(data, 0, data.length - 1);
   }
 
-  public void quicksort(int[] data, int start, int end) {
-    if (start >= end) return;
-    int partition = partition(data, start, end);
-    quicksort(data, start, partition - 1);
-    quicksort(data, partition + 1, end);
+  public void quicksort(int[] data, int low, int high) {
+    if (low >= high) return;
+    int mid = partition(data, low, high);
+    quicksort(data, low, mid - 1);
+    quicksort(data, mid + 1, high);
   }
 
-  public int partition(int[] data, int start, int end) {
-    int pivot = data[end];
-    int i = start;
-    for (int j = start; j < end; j++) {
+  public int partition(int[] data, int low, int high) {
+    int pivot = data[high];
+    int i = low;
+    for (int j = low; j < high; j++) {
       if (data[j] < pivot) {
         swap(data, i, j);
         i++;
       }
     }
-    swap(data, i, end);
+    swap(data, i, high);
     return i;
   }
 
