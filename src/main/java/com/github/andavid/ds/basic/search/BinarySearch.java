@@ -36,4 +36,89 @@ public class BinarySearch {
       return bsearchRecursionHelper(data, low, mid - 1, value);
     }
   }
+
+  public int bsearchFirst(int[] data, int value) {
+    int low = 0;
+    int high = data.length - 1;
+
+    while (low <= high) {
+      int mid = low + ((high - low) >> 1);
+      if (data[mid] < value) {
+        low = mid + 1;
+      } else if (data[mid] > value) {
+        high = mid - 1;
+      } else {
+        if (mid == 0 || data[mid -1] != value) {
+          return mid;
+        } else {
+          high = mid - 1;
+        }
+      }
+    }
+
+    return -1;
+  }
+
+  public int bsearchLast(int[] data, int value) {
+    int low = 0;
+    int high = data.length - 1;
+
+    while (low <= high) {
+      int mid = low + ((high - low) >> 1);
+      if (data[mid] < value) {
+        low = mid + 1;
+      } else if (data[mid] > value) {
+        high = mid - 1;
+      } else {
+        if (mid == data.length - 1 || data[mid + 1] != value) {
+          return mid;
+        } else {
+          low = mid + 1;
+        }
+      }
+    }
+
+    return -1;
+  }
+
+  public int bsearchFirstGreater(int[] data, int value) {
+    int low = 0;
+    int high = data.length - 1;
+
+    while (low <= high) {
+      int mid = low + ((high - low) >> 1);
+      if (data[mid] >= value) {
+        if (mid == 0 || data[mid - 1] < value) {
+          return mid;
+        } else {
+          high = mid - 1;
+        }
+      } else {
+        low = mid + 1;
+      }
+    }
+
+    return -1;
+  }
+
+  public int bsearchLastLess(int[] data, int value) {
+    int low = 0;
+    int high = data.length - 1;
+
+    while (low <= high) {
+      int mid = low + ((high - low) >> 1);
+      if (data[mid] <= value) {
+        if (mid == data.length - 1 || data[mid + 1] > value) {
+          return mid;
+        } else {
+          low = mid + 1;
+        }
+      } else {
+        high = mid - 1;
+      }
+    }
+
+    return -1;
+  }
+
 }
