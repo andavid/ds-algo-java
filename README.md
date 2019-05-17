@@ -35,13 +35,18 @@
 
 ## 排序
 
-* 实现归并排序、快速排序、插入排序、冒泡排序、选择排序
+* 实现 [归并排序][MergeSort]、[快速排序][QuickSort]、插入排序、冒泡排序、选择排序
 * 编程实现O(n)时间复杂度内找到一组数据的第K大元素
+
+[MergeSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/MergeSort.java
+[QuickSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/QuickSort.java
 
 ## 二分查找
 
-* 实现一个有序数组的二分查找算法
-* 实现模糊二分查找算法（比如大于等于给定值的第一个元素）
+* [实现一个有序数组的二分查找算法][binary-search]
+* [实现模糊二分查找算法（比如大于等于给定值的第一个元素）][binary-search]
+
+[binary-search]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/search/BinarySearch.java
 
 ## 散列表
 
@@ -75,8 +80,11 @@
 
 ## 回溯
 
-* [利用回溯算法求解八皇后问题](https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/EightQueen.java)
-* [利用回溯算法求解 0-1 背包问题](https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/Package.java)
+* [利用回溯算法求解八皇后问题][EightQueen]
+* [利用回溯算法求解 0-1 背包问题][Package]
+
+[EightQueen]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/EightQueen.java
+[Package]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/Package.java
 
 ## 分治
 
