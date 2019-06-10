@@ -35,13 +35,14 @@
 
 ## 排序
 
-* 实现 [归并排序][MergeSort]、[快速排序][QuickSort]、[插入排序][InsertionSort]、[冒泡排序][BubbleSort]、选择排序
+* 实现 [归并排序][MergeSort]、[快速排序][QuickSort]、[插入排序][InsertionSort]、[冒泡排序][BubbleSort]、[选择排序][SelectionSort]
 * 编程实现O(n)时间复杂度内找到一组数据的第K大元素
 
 [MergeSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/MergeSort.java
 [QuickSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/QuickSort.java
 [BubbleSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/BubbleSort.java
 [InsertionSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/InsertionSort.java
+[SelectionSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/SelectionSort.java
 
 ## 二分查找
 
