@@ -11,6 +11,6 @@ public class TestMergeSort {
     int[] data = {9,8,7,6,5,4,3,2,1};
     System.out.println("before merge sort: " + Arrays.toString(data));
     mergeSort.sort(data);
-    System.out.println("before merge sort: " + Arrays.toString(data));
+    System.out.println("after merge sort: " + Arrays.toString(data));
   }
 }
