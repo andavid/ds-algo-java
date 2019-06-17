@@ -47,7 +47,7 @@
 ## 二分查找
 
 * 实现一个有序数组的 [二分查找算法][binary-search]
-* 实现 [模糊二分查找算法] （比如大于等于给定值的第一个元素）[binary-search]
+* 实现 [模糊二分查找算法][binary-search]（比如大于等于给定值的第一个元素）
 
 [binary-search]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/search/BinarySearch.java
 
