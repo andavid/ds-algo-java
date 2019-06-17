@@ -69,10 +69,15 @@
 
 ## 堆
 
-* 实现一个小顶堆、大顶堆、优先级队列
-* 实现堆排序
+* 实现一个小顶堆、[大顶堆][maxHeap]、[优先级队列][priorityQueue]
+* 实现[堆排序][heapSort]
 * 利用优先级队列合并K个有序数组
-* 求一组动态数据集合的最大Top K
+* 求一组动态数据集合的[最大Top K][topk]
+
+[maxHeap]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/Heap.java
+[priorityQueue]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/PriorityQueueTest.java
+[heapSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/HeapSort.java
+[topk]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/Topk.java
 
 ## 图
 
