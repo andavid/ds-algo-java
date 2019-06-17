@@ -46,8 +46,8 @@
 
 ## 二分查找
 
-* [实现一个有序数组的二分查找算法][binary-search]
-* [实现模糊二分查找算法（比如大于等于给定值的第一个元素）][binary-search]
+* 实现一个有序数组的 [二分查找算法][binary-search]
+* 实现 [模糊二分查找算法] （比如大于等于给定值的第一个元素）[binary-search]
 
 [binary-search]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/search/BinarySearch.java
 
@@ -70,9 +70,9 @@
 ## 堆
 
 * 实现一个小顶堆、[大顶堆][maxHeap]、[优先级队列][priorityQueue]
-* 实现[堆排序][heapSort]
+* 实现 [堆排序][heapSort]
 * 利用优先级队列合并K个有序数组
-* 求一组动态数据集合的[最大Top K][topk]
+* 求一组动态数据集合的 [最大Top K][topk]
 
 [maxHeap]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/Heap.java
 [priorityQueue]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/PriorityQueueTest.java
@@ -88,8 +88,8 @@
 
 ## 回溯
 
-* [利用回溯算法求解八皇后问题][EightQueen]
-* [利用回溯算法求解 0-1 背包问题][Package]
+* 利用回溯算法求解 [八皇后问题][EightQueen]
+* 利用回溯算法求解 [0-1 背包问题][Package]
 
 [EightQueen]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/EightQueen.java
 [Package]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/Package.java
