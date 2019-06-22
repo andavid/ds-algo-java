@@ -32,5 +32,8 @@ public class TestBinarySearchTree {
     System.out.println("delete 5");
     bst.delete(5);
     System.out.println(tree.levelOrder(root));
+
+    System.out.println("max node " + bst.getMaxNode().val);
+    System.out.println("min node " + bst.getMinNode().val);
   }
 }

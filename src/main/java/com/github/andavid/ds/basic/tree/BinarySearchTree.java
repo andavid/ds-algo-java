@@ -10,12 +10,12 @@ public class BinarySearchTree {
   public TreeNode find(int data) {
     TreeNode p = root;
     while (p != null) {
-      if (data == p.val) {
-        return p;
-      } else if (data < p.val) {
+      if (data < p.val) {
         p = p.left;
-      } else {
+      } else if (data > p.val) {
         p = p.right;
+      } else {
+        return p;
       }
     }
     return null;
@@ -29,18 +29,18 @@ public class BinarySearchTree {
 
     TreeNode p = root;
     while (p != null) {
-      if (data > p.val) {
-        if (p.right == null) {
-          p.right = new TreeNode(data);
-          return;
-        }
-        p = p.right;
-      } else {
+      if (data < p.val) {
         if (p.left == null) {
           p.left = new TreeNode(data);
           return;
         }
         p = p.left;
+      } else {
+        if (p.right == null) {
+          p.right = new TreeNode(data);
+          return;
+        }
+        p = p.right;
       }
     }
   }
@@ -51,7 +51,7 @@ public class BinarySearchTree {
 
     while (p != null && p.val != data) {
       parent = p;
-      if (p.val > data) {
+      if (data < p.val) {
         p = p.left;
       } else {
         p = p.right;
@@ -72,7 +72,8 @@ public class BinarySearchTree {
         minNode = minNode.left;
       }
       p.val = minNode.val;
-      // 删除右子树的最小节点（肯定不会有左子树）
+      // 要删除的节点变成了右子树的最小节点
+      // 由于该节点肯定不会有左孩子，因此可以使用接下来的代码进行删除
       p = minNode;
       parent = minNodeParent;
     }
@@ -95,6 +96,22 @@ public class BinarySearchTree {
     } else {
       parent.right = child;
     }
+  }
+
+  public TreeNode getMaxNode() {
+    TreeNode p = root;
+    while (p != null && p.right != null) {
+      p = p.right;
+    }
+    return p;
+  }
+
+  public TreeNode getMinNode() {
+    TreeNode p = root;
+    while (p != null && p.left != null) {
+      p = p.left;
+    }
+    return p;
   }
 
 }
