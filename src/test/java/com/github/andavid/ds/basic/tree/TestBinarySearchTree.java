@@ -33,7 +33,22 @@ public class TestBinarySearchTree {
     bst.delete(5);
     System.out.println(tree.levelOrder(root));
 
-    System.out.println("max node " + bst.getMaxNode().val);
-    System.out.println("min node " + bst.getMinNode().val);
+    System.out.println("max node " + bst.maximum().val);
+    System.out.println("min node " + bst.minimum().val);
+
+    int data = 4;
+    System.out.println("Predecessor node of " + data + " is: ");
+    if (bst.predecessor(data) != null) {
+      System.out.println(bst.predecessor(data).val);
+    } else {
+      System.out.println("null");
+    }
+
+    System.out.println("Successor node of " + data + " is: ");
+    if (bst.successor(data) != null) {
+      System.out.println(bst.successor(data).val);
+    } else {
+      System.out.println("null");
+    }
   }
 }
