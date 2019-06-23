@@ -69,24 +69,25 @@
 
 ## 二叉树
 
-* 实现一个二叉查找树，并且支持插入、删除、查找操作
+* 实现一个[二叉查找树][BinarySearchTree]，并且支持插入、删除、查找操作
 * 实现查找二叉查找树中某个节点的后继、前驱节点
-* 实现二叉树 [前、中、后序以及按层遍历][binaryTree]
+* 实现二叉树 [前、中、后序以及按层遍历][BinaryTree]
 
-[binaryTree]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/tree/BinaryTree.java
+[BinarySearchTree]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/tree/BinarySearchTree.java
+[BinaryTree]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/tree/BinaryTree.java
 
 ## 堆
 
-* 实现一个小顶堆、[大顶堆][maxHeap]、[优先级队列][priorityQueue]
-* 实现 [堆排序][heapSort]
-* 利用优先级队列 [合并K个有序数组][mergeSortedArray]
-* 求一组动态数据集合的 [最大Top K][topk]
+* 实现一个小顶堆、[大顶堆][MaxHeap]、[优先级队列][PriorityQueue]
+* 实现 [堆排序][HeapSort]
+* 利用优先级队列 [合并K个有序数组][MergeSortedArray]
+* 求一组动态数据集合的 [最大Top K][Topk]
 
-[maxHeap]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/Heap.java
-[priorityQueue]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/PriorityQueueTest.java
-[heapSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/HeapSort.java
-[mergeSortedArray]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/MergeSortedArray.java
-[topk]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/Topk.java
+[MaxHeap]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/Heap.java
+[PriorityQueue]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/PriorityQueueUsage.java
+[HeapSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/HeapSort.java
+[MergeSortedArray]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/MergeSortedArray.java
+[Topk]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/Topk.java
 
 ## 图
 

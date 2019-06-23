@@ -99,16 +99,22 @@ public class BinarySearchTree {
   }
 
   public TreeNode getMaxNode() {
+    if (root == null) {
+      return null;
+    }
     TreeNode p = root;
-    while (p != null && p.right != null) {
+    while (p.right != null) {
       p = p.right;
     }
     return p;
   }
 
   public TreeNode getMinNode() {
+    if (root == null) {
+      return null;
+    }
     TreeNode p = root;
-    while (p != null && p.left != null) {
+    while (p.left != null) {
       p = p.left;
     }
     return p;
