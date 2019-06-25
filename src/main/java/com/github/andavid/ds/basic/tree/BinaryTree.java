@@ -232,36 +232,34 @@ public class BinaryTree {
 
   // Encodes a tree to a single string.
   public String serialize(TreeNode root) {
-    List<String> list = new ArrayList<>();
     if (root == null) {
-      return list.toString();
+      return "[]";
     }
 
+    List<String> list = new ArrayList<>();
     Queue<TreeNode> queue = new LinkedList<>();
     queue.offer(root);
 
     while (!queue.isEmpty()) {
-      int size = queue.size();
-      for (int i = 0; i < size; i++) {
-        TreeNode node = queue.poll();
-        if (node == null) {
-          list.add("null");
-          continue;
-        } else {
-          list.add("" + node.val);
-        }
+      TreeNode node = queue.poll();
 
-        if (node.left != null) {
-          queue.offer(node.left);
-        } else {
-          queue.offer(null);
-        }
+      if (node == null) {
+        list.add("null");
+        continue;
+      } else {
+        list.add("" + node.val);
+      }
 
-        if (node.right != null) {
-          queue.offer(node.right);
-        } else {
-          queue.offer(null);
-        }
+      if (node.left != null) {
+        queue.offer(node.left);
+      } else {
+        queue.offer(null);
+      }
+
+      if (node.right != null) {
+        queue.offer(node.right);
+      } else {
+        queue.offer(null);
       }
     }
 
@@ -274,28 +272,56 @@ public class BinaryTree {
       }
     }
 
-    return list.toString();
+    StringBuilder sb = new StringBuilder();
+    sb.append('[');
+    for (int i = 0; i < list.size(); i++) {
+      sb.append(list.get(i));
+      if (i == list.size() - 1) {
+        sb.append("]");
+      } else {
+        sb.append(",");
+      }
+    }
+
+    return sb.toString();
   }
 
+  // Decodes your encoded data to tree.
   public TreeNode deserialize(String data) {
-    if (data == null || data.length() <= 2) {
+    if (data == null || data.equals("[]") || data.length() <= 2) {
       return null;
     }
 
     String[] strArray = data.substring(1, data.length() - 1).split(",");
-    Queue<String> queue = new LinkedList<>();
-    queue.addAll(Arrays.asList(strArray));
-    return buildTree(queue);
-  }
+    Queue<String> list = new LinkedList<>();
+    list.addAll(Arrays.asList(strArray));
 
-  public TreeNode buildTree(Queue<String> queue) {
-    String val = queue.poll();
-    if (val == null || val.equals("null")) {
-      return null;
+    Queue<TreeNode> queue = new LinkedList<>();
+    TreeNode root = new TreeNode(Integer.valueOf(list.poll()));
+    queue.offer(root);
+
+    while (!queue.isEmpty()) {
+      TreeNode node = queue.poll();
+
+      String leftVal = list.poll();
+      if (leftVal == null || leftVal.equals("null")) {
+        node.left = null;
+      } else {
+        TreeNode leftNode = new TreeNode(Integer.valueOf(leftVal));
+        node.left = leftNode;
+        queue.offer(leftNode);
+      }
+
+      String rightVal = list.poll();
+      if (rightVal == null || rightVal.equals("null")) {
+        node.right = null;
+      } else {
+        TreeNode rightNode = new TreeNode(Integer.valueOf(rightVal));
+        node.right = rightNode;
+        queue.offer(rightNode);
+      }
     }
-    TreeNode root = new TreeNode(Integer.valueOf(val));
-    root.left = buildTree(queue);
-    root.right = buildTree(queue);
+
     return root;
   }
 

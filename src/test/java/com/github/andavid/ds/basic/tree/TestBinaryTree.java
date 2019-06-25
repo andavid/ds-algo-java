@@ -1,5 +1,7 @@
 package com.github.andavid.ds.basic.tree;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class TestBinaryTree {
@@ -96,15 +98,21 @@ public class TestBinaryTree {
     node3.right = node5;
 
     BinaryTree tree = new BinaryTree();
-    System.out.println("serialize: " + tree.serialize(root));
+    System.out.println(tree.serialize(root));
+    System.out.println(tree.serialize(null));
   }
 
   @Test
   public void testDeserialize() {
     BinaryTree tree = new BinaryTree();
-    TreeNode root = tree.deserialize("[1,2,3,null,null,4,5]");
-    // TreeNode root = tree.deserialize("[5,4,7,3,null,2,null,-1,null,9]");
-    // TreeNode root = tree.deserialize("[1,null,2,3]");
-    System.out.println(tree.serialize(root));
+
+    String list = "[1,2,3,null,null,4,5]";
+    assertEquals(tree.serialize(tree.deserialize(list)), list);
+
+    list = "[5,4,7,3,null,2,null,-1,null,9]";
+    assertEquals(tree.serialize(tree.deserialize(list)), list);
+
+    list = "[1,null,2,3]";
+    assertEquals(tree.serialize(tree.deserialize(list)), list);
   }
 }
