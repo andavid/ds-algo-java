@@ -1,6 +1,7 @@
 package com.github.andavid.ds.basic.tree;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -227,6 +228,75 @@ public class BinaryTree {
       return false;
     }
     return r1.val == r2.val && isSym(r1.left, r2.right) && isSym(r1.right, r2.left);
+  }
+
+  // Encodes a tree to a single string.
+  public String serialize(TreeNode root) {
+    List<String> list = new ArrayList<>();
+    if (root == null) {
+      return list.toString();
+    }
+
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+
+    while (!queue.isEmpty()) {
+      int size = queue.size();
+      for (int i = 0; i < size; i++) {
+        TreeNode node = queue.poll();
+        if (node == null) {
+          list.add("null");
+          continue;
+        } else {
+          list.add("" + node.val);
+        }
+
+        if (node.left != null) {
+          queue.offer(node.left);
+        } else {
+          queue.offer(null);
+        }
+
+        if (node.right != null) {
+          queue.offer(node.right);
+        } else {
+          queue.offer(null);
+        }
+      }
+    }
+
+    // 移除末尾的 null
+    for (int i = list.size() - 1; i >= 0; i--) {
+      if (list.get(i).equals("null")) {
+        list.remove(i);
+      } else {
+        break;
+      }
+    }
+
+    return list.toString();
+  }
+
+  public TreeNode deserialize(String data) {
+    if (data == null || data.length() <= 2) {
+      return null;
+    }
+
+    String[] strArray = data.substring(1, data.length() - 1).split(",");
+    Queue<String> queue = new LinkedList<>();
+    queue.addAll(Arrays.asList(strArray));
+    return buildTree(queue);
+  }
+
+  public TreeNode buildTree(Queue<String> queue) {
+    String val = queue.poll();
+    if (val == null || val.equals("null")) {
+      return null;
+    }
+    TreeNode root = new TreeNode(Integer.valueOf(val));
+    root.left = buildTree(queue);
+    root.right = buildTree(queue);
+    return root;
   }
 
 }

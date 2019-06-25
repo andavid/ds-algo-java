@@ -64,7 +64,7 @@ public class TestBinaryTree {
   }
 
   @Test
-  public void tesetSymmetric() {
+  public void testSymmetric() {
     TreeNode root = new TreeNode(1);
     TreeNode node2 = new TreeNode(2);
     TreeNode node3 = new TreeNode(2);
@@ -83,4 +83,28 @@ public class TestBinaryTree {
     System.out.println("isSymmetric = " + tree.isSymmetric(root));
   }
 
+  @Test
+  public void testSerialize() {
+    TreeNode root = new TreeNode(1);
+    TreeNode node2 = new TreeNode(2);
+    TreeNode node3 = new TreeNode(3);
+    TreeNode node4 = new TreeNode(4);
+    TreeNode node5 = new TreeNode(5);
+    root.left = node2;
+    root.right = node3;
+    node3.left = node4;
+    node3.right = node5;
+
+    BinaryTree tree = new BinaryTree();
+    System.out.println("serialize: " + tree.serialize(root));
+  }
+
+  @Test
+  public void testDeserialize() {
+    BinaryTree tree = new BinaryTree();
+    TreeNode root = tree.deserialize("[1,2,3,null,null,4,5]");
+    // TreeNode root = tree.deserialize("[5,4,7,3,null,2,null,-1,null,9]");
+    // TreeNode root = tree.deserialize("[1,null,2,3]");
+    System.out.println(tree.serialize(root));
+  }
 }
