@@ -1,5 +1,7 @@
 package com.github.andavid.ds.basic.tree;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class TestBinarySearchTree {
@@ -51,4 +53,24 @@ public class TestBinarySearchTree {
       System.out.println("null");
     }
   }
+
+  @Test
+  public void testSerialize() {
+    TreeNode root = new TreeNode(5);
+    TreeNode node2 = new TreeNode(3);
+    TreeNode node3 = new TreeNode(6);
+    TreeNode node4 = new TreeNode(2);
+    TreeNode node5 = new TreeNode(7);
+    root.left = node2;
+    root.right = node3;
+    node2.left = node4;
+    node3.right = node5;
+
+    BinarySearchTree bst = new BinarySearchTree(root);
+    System.out.println(bst.serialize(root));
+
+    String list = "5,3,2,6,7,";
+    assertEquals(bst.serialize(bst.deserialize(list)), list);
+  }
+
 }

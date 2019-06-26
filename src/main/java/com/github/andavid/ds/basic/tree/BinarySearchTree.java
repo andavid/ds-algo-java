@@ -1,5 +1,8 @@
 package com.github.andavid.ds.basic.tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
   private TreeNode root;
 
@@ -226,4 +229,46 @@ public class BinarySearchTree {
     }
   }
 
+  // Encodes a tree to a single string.
+  public String serialize(TreeNode root) {
+    StringBuilder sb = new StringBuilder();
+    buildString(root, sb);
+    return sb.toString();
+  }
+
+  public void buildString(TreeNode root, StringBuilder sb) {
+    if (root == null) {
+      return;
+    }
+    sb.append(root.val + ",");
+    buildString(root.left, sb);
+    buildString(root.right, sb);
+  }
+
+  // Decodes your encoded data to tree.
+  public TreeNode deserialize(String data) {
+    if (data == null || data.equals("")) {
+      return null;
+    }
+    String[] strs = data.split(",");
+    Queue<Integer> queue = new LinkedList<>();
+    for (String str : strs) {
+      queue.offer(Integer.valueOf(str));
+    }
+    return buildTree(queue);
+  }
+
+  public TreeNode buildTree(Queue<Integer> queue) {
+    if (queue.isEmpty()) {
+      return null;
+    }
+    TreeNode root = new TreeNode(queue.poll());
+    Queue<Integer> smallerQueue = new LinkedList<>();
+    while (!queue.isEmpty() && queue.peek() < root.val) {
+      smallerQueue.offer(queue.poll());
+    }
+    root.left = buildTree(smallerQueue);
+    root.right = buildTree(queue);
+    return root;
+  }
 }
