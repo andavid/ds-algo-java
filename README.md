@@ -38,24 +38,24 @@
 * 实现 [归并排序][MergeSort]、[快速排序][QuickSort]、[插入排序][InsertionSort]、[冒泡排序][BubbleSort]、[选择排序][SelectionSort]、[希尔排序][ShellSort]、[堆排序][HeapSort]、[桶排序][BucketSort]、[计数排序][CountingSort]、[基数排序][RadixSort]
 * 编程实现O(n)时间复杂度内 [找到一组数据的第K大元素][FindKthLargest]
 
-[MergeSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/MergeSort.java
-[QuickSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/QuickSort.java
-[BubbleSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/BubbleSort.java
-[InsertionSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/InsertionSort.java
-[SelectionSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/SelectionSort.java
-[ShellSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/ShellSort.java
-[HeapSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/HeapSort.java
-[BucketSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/BucketSort.java
-[CountingSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/CountingSort.java
-[RadixSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/RadixSort.java
-[FindKthLargest]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/FindKthLargest.java
+[MergeSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/MergeSort.java
+[QuickSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/QuickSort.java
+[BubbleSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/BubbleSort.java
+[InsertionSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/InsertionSort.java
+[SelectionSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/SelectionSort.java
+[ShellSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/ShellSort.java
+[HeapSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/HeapSort.java
+[BucketSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/BucketSort.java
+[CountingSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/CountingSort.java
+[RadixSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/RadixSort.java
+[FindKthLargest]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/sort/FindKthLargest.java
 
 ## 二分查找
 
 * 实现一个有序数组的 [二分查找算法][binary-search]
 * 实现 [模糊二分查找算法][binary-search]（比如大于等于给定值的第一个元素）
 
-[binary-search]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/search/BinarySearch.java
+[binary-search]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/search/BinarySearch.java
 
 ## 散列表
 
@@ -73,8 +73,8 @@
 * 实现查找二叉查找树中某个节点的 [后继、前驱节点][BinarySearchTree]
 * 实现二叉树 [前、中、后序以及按层遍历][BinaryTree]
 
-[BinarySearchTree]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/tree/BinarySearchTree.java
-[BinaryTree]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/tree/BinaryTree.java
+[BinarySearchTree]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/tree/BinarySearchTree.java
+[BinaryTree]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/tree/BinaryTree.java
 
 ## 堆
 
@@ -83,11 +83,11 @@
 * 利用优先级队列 [合并K个有序数组][MergeSortedArray]
 * 求一组动态数据集合的 [最大Top K][Topk]
 
-[MaxHeap]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/Heap.java
-[PriorityQueue]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/PriorityQueueUsage.java
-[HeapSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/sort/HeapSort.java
-[MergeSortedArray]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/MergeSortedArray.java
-[Topk]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/basic/heap/Topk.java
+[MaxHeap]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/heap/Heap.java
+[PriorityQueue]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/heap/PriorityQueueUsage.java
+[HeapSort]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/sort/HeapSort.java
+[MergeSortedArray]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/heap/MergeSortedArray.java
+[Topk]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/heap/Topk.java
 
 ## 图
 
