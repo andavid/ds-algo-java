@@ -12,7 +12,7 @@ public class StackUsage {
     s.push(8);
     s.push(6);
     // 3. Check if stack is empty.
-    if (s.empty() == true) {
+    if (s.empty()) {
         System.out.println("Stack is empty!");
         return;
     }

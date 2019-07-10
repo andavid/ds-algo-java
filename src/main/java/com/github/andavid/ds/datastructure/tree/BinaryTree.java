@@ -48,7 +48,7 @@ public class BinaryTree {
     Stack<TreeNode> stack = new Stack<>();
     stack.push(root);
 
-    while (!stack.isEmpty()) {
+    while (!stack.empty()) {
       TreeNode p = stack.pop();
       list.add(p.val);
       if (p.right != null) {
@@ -107,7 +107,7 @@ public class BinaryTree {
     Stack<TreeNode> stack = new Stack<>();
     stack.push(root);
 
-    while (!stack.isEmpty()) {
+    while (!stack.empty()) {
       TreeNode p = stack.pop();
       if (p.left != null) {
         stack.push(p.left);
