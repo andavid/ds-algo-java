@@ -2,6 +2,9 @@
 
 数据结构和算法必知必会的 50 个代码实现（Java）
 
+* https://github.com/wangzheng0822/algo
+* https://github.com/kkzfl22/datastruct
+
 ## 数组
 
 * 实现一个支持动态扩容的数组
@@ -106,7 +109,9 @@
 
 ## 分治
 
-* 利用分治算法求一组数据的逆序对个数
+* 利用分治算法求一组数据的 [逆序对个数][CountInversePairs]
+
+[CountInversePairs]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/divideandconquer/CountInversePairs.java
 
 ## 动态规划
 
