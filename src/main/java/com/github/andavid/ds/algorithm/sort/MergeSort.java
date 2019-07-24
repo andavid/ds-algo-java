@@ -1,8 +1,13 @@
 package com.github.andavid.ds.algorithm.sort;
 
 public class MergeSort {
+  private int[] aux;
 
   public void sort(int[] data) {
+    if (data == null || data.length <= 1) {
+      return;
+    }
+    aux = new int[data.length];
     mergeSort(data, 0, data.length - 1);
   }
 
@@ -15,36 +20,21 @@ public class MergeSort {
   }
 
   public void merge(int[] data, int low, int mid, int high) {
-    int[] temp = new int[high - low + 1];
     int i = low;
     int j = mid + 1;
-    int k = 0;
 
-    while (i <= mid && j <= high) {
-      if (data[i] < data[j]) {
-        temp[k++] = data[i++];
+    System.arraycopy(data, low, aux, low, high - low + 1);
+
+    for (int k = low; k <= high; k++) {
+      if (i > mid) {
+        data[k] = aux[j++];
+      } else if (j > high) {
+        data[k] = aux[i++];
+      } else if (aux[i] > aux[j]) {
+        data[k] = aux[j++];
       } else {
-        temp[k++] = data[j++];
+        data[k] = aux[i++];
       }
     }
-
-    while (i <= mid) {
-      temp[k++] = data[i++];
-    }
-
-    while (j <= high) {
-      temp[k++] = data[j++];
-    }
-
-    for (int l = 0; l < temp.length; l++) {
-      data[low + l] = temp[l];
-    }
-  }
-
-  public void print(int[] data) {
-    for (int item : data) {
-      System.out.print("" + item + ",");
-    }
-    System.out.println();
   }
 }
