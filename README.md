@@ -9,9 +9,11 @@
 
 ## 数组
 
-* 实现一个支持动态扩容的数组
+* 实现一个 [支持动态扩容的数组][dynamic-array]
 * 实现一个大小固定的有序数组，支持动态增删改操作
 * 实现两个有序数组合并为一个有序数组
+
+[dynamic-array]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/array/DynamicArray.java
 
 ## 链表
 

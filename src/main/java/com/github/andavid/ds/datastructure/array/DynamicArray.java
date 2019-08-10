@@ -103,7 +103,7 @@ public class DynamicArray<E> {
    */
   public E get(int index) {
     if (index < 0 || index > size - 1) {
-      throw new IllegalArgumentException("remove fail. index out of range.");
+      throw new IllegalArgumentException("get fail. index out of range.");
     }
     return table[index];
   }
@@ -113,7 +113,7 @@ public class DynamicArray<E> {
    */
   public void set(int index, E value) {
     if (index < 0 || index > size - 1) {
-      throw new IllegalArgumentException("remove fail. index out of range.");
+      throw new IllegalArgumentException("set fail. index out of range.");
     }
     table[index] = value;
   }
@@ -168,4 +168,22 @@ public class DynamicArray<E> {
     }
   }
 
+  public String toString() {
+    if (isEmpty()) {
+      return "[]";
+    }
+
+    StringBuilder sb = new StringBuilder();
+    sb.append("[");
+    for (int i = 0; i < size; i++) {
+      sb.append(get(i));
+      if (i == size - 1) {
+        sb.append("]");
+      } else {
+        sb.append(',').append(' ');
+      }
+    }
+
+    return sb.toString();
+  }
 }
