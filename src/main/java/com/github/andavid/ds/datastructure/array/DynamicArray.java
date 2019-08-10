@@ -3,7 +3,7 @@ package com.github.andavid.ds.datastructure.array;
 /**
  * 实现一个支持动态扩容的数组
  */
-public class DynamicArray {
+public class DynamicArray<E> {
 
   /**
    * 默认容量
@@ -21,91 +21,149 @@ public class DynamicArray {
   int capacity;
 
   /**
-   * 当前数据个数
+   * 当前元素个数
    */
   int size;
 
   /**
    * 数组容器
    */
-  int[] table;
-
-  public DynamicArray(int initialCapacity) {
-    capacity = initialCapacity;
-    table = new int[capacity];
-  }
+  E[] table;
 
   public DynamicArray() {
     this(DEAFAULT_CAPACITY);
   }
 
+  public DynamicArray(int initialCapacity) {
+    capacity = initialCapacity;
+    table = (E[]) new Object[capacity];
+  }
+
+  public void add(E e) {
+    addLast(e);
+  }
+
+  public void addFirst(E e) {
+    addElement(0, e);
+  }
+
+  public void addLast(E e) {
+    addElement(size, e);
+  }
+
+  public void addElement(int index, E e) {
+    if (index < 0 || index > size) {
+      throw new IllegalArgumentException("add fail. index out of range.");
+    }
+
+    if (size == MAX_CAPACITY) {
+      throw new IllegalArgumentException("add fail. exceed max capacity.");
+    }
+
+    resize();
+
+    for (int i = size - 1; i >= index; i--) {
+      table[i + 1] = table[i];
+    }
+    table[index] = e;
+    size++;
+  }
+
+  public E remove() {
+    return removeLast();
+  }
+
+  public E removeFirst() {
+    return removeElement(0);
+  }
+
+  public E removeLast() {
+    return removeElement(size - 1);
+  }
+
+  public E removeElement(int index) {
+    if (index < 0 || index > size - 1) {
+      throw new IllegalArgumentException("remove fail. index out of range.");
+    }
+
+    E element = table[index];
+    for (int i = index; i < size - 1; i++) {
+      table[i] = table[i + 1];
+    }
+    table[size - 1] = null;
+    size--;
+
+    resize();
+
+    return element;
+  }
+
   /**
-   * 添加元素
+   * 获取元素
    */
-  public void add(int value) {
-    if (size == capacity - 1) {
-      resize();
+  public E get(int index) {
+    if (index < 0 || index > size - 1) {
+      throw new IllegalArgumentException("remove fail. index out of range.");
     }
-    if (size < capacity) {
-      table[size++] = value;
-    }
+    return table[index];
   }
 
   /**
-   * 删除指定索引元素
-   * @param index
+   * 根据索引设置元素值
    */
-  public void remove(int index) {
-    if (isValid(index)) {
-      if (index == size - 1) {
-        // 删除最末尾的元素
-        table[index] = 0;
-      } else {
-        for (int i = index; i < size - 1; i++) {
-          table[i] = table[i + 1];
-        }
-      }
-      size--;
-    } else {
-      throw new IllegalArgumentException("index out of range");
+  public void set(int index, E value) {
+    if (index < 0 || index > size - 1) {
+      throw new IllegalArgumentException("remove fail. index out of range.");
     }
+    table[index] = value;
   }
 
-  public int get(int index) {
-    if (isValid(index)) {
-      return table[index];
-    } else {
-      throw new IllegalArgumentException("index out of range");
-    }
+  /**
+   * 判断数组是否为空
+   */
+  public boolean isEmpty() {
+    return size == 0;
   }
 
-  public void set(int index, int value) {
-    if (isValid(index)) {
-      table[index] = value;
-    } else {
-      throw new IllegalArgumentException("index out of range");
-    }
-  }
-
-  public boolean isValid(int index) {
-    return index >= 0 && index < size;
-  }
-
-  public boolean isFull() {
-    return size == capacity;
-  }
-
+  /**
+   * 获取当前数组元素个数
+   */
   public int getSize() {
     return size;
   }
 
+  /**
+   * 获取当前数组容量
+   */
+  public int getCapacity() {
+    return capacity;
+  }
+
+  /**
+   * 数组扩容
+   */
   public void resize() {
-    if (capacity < MAX_CAPACITY) {
-      capacity = Math.min(2 * capacity, MAX_CAPACITY);
-      int[] newTable = new int[capacity];
-      for (int i = 0; i < size; i++) {
-        newTable[i] = table[i];
+    int oldCapacity = capacity;
+
+    // 扩容
+    if (size == capacity) {
+      // 容量已满，容量扩大一倍
+      if (capacity > MAX_CAPACITY / 2) {
+        capacity = MAX_CAPACITY;
+      } else {
+        capacity = capacity * 2;
       }
+    }
+
+    // 缩容
+    if (size <= capacity / 4 && capacity / 2 != 0) {
+      // 当实际元素个数小于等于容量的四分之一时，将容量缩小为原来的一半
+      capacity = capacity / 2;
+    }
+
+    if (capacity != oldCapacity) {
+      E[] newTable = (E[]) new Object[capacity];
+      System.arraycopy(table, 0, newTable, 0, size);
       table = newTable;
     }
   }
