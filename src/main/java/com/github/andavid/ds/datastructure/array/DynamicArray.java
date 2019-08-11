@@ -8,7 +8,7 @@ public class DynamicArray<E> {
   /**
    * 默认容量
    */
-  public static final int DEAFAULT_CAPACITY = 10;
+  public static final int DEFAULT_CAPACITY = 10;
 
   /**
    * 最大容量
@@ -31,7 +31,7 @@ public class DynamicArray<E> {
   E[] table;
 
   public DynamicArray() {
-    this(DEAFAULT_CAPACITY);
+    this(DEFAULT_CAPACITY);
   }
 
   public DynamicArray(int initialCapacity) {
