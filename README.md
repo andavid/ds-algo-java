@@ -11,10 +11,11 @@
 
 * 实现一个 [支持动态扩容的数组][dynamic-array]
 * 实现一个 [大小固定的有序数组][sorted-array]，支持动态增删改操作
-* 实现两个有序数组合并为一个有序数组
+* 实现 [两个有序数组合并为一个有序数组][merge-two-sorted-array]
 
 [dynamic-array]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/array/DynamicArray.java
 [sorted-array]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/array/SortedArray.java
+[merge-two-sorted-array]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/array/MergeTwoSortedArray.java
 
 ## 链表
 
