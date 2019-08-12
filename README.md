@@ -24,9 +24,9 @@
 * 实现两个有序的链表合并为一个有序链表
 * 实现求链表的中间结点
 
-[singly-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/SinglyLinkeList.java
-[circular-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/CircularLinkeList.java
-[doubly-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/DoublyLinkeList.java
+[singly-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/SinglyLinkedList.java
+[circular-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/CircularLinkedList.java
+[doubly-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/DoublyLinkedList.java
 
 ## 栈
 
