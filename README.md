@@ -23,6 +23,8 @@
 * 实现 [单链表反转][reverse-linked-list]
 * 实现 [两个有序的链表合并为一个有序链表][merge-two-linked-list]
 * 实现 [求链表的中间结点][find-middle-node]
+* 实现 [链表中环的检测][cycle-linked-list]
+* 实现 删除链表倒数第 n 个结点
 
 [singly-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/SinglyLinkedList.java
 [circular-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/CircularLinkedList.java
@@ -30,6 +32,7 @@
 [reverse-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/ReverseLinkedList.java
 [merge-two-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/MergeTwoLinkedList.java
 [find-middle-node]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/FindMiddleNode.java
+[cycle-linked-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/linkedlist/CycleLinkedList.java
 
 ## 栈
 
