@@ -37,9 +37,11 @@
 
 ## 栈
 
-* 用数组实现一个顺序栈
+* 用数组实现一个 [顺序栈][array-stack]
 * 用链表实现一个链式栈
 * 编程模拟实现一个浏览器的前进、后退功能
+
+[array-stack]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/stack/ArrayStack.java
 
 ## 队列
 
