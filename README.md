@@ -39,10 +39,11 @@
 
 * 用数组实现一个 [顺序栈][array-stack]
 * 用链表实现一个 [链式栈][linked-stack]
-* 编程模拟实现一个浏览器的前进、后退功能
+* 编程模拟实现一个 [浏览器的前进、后退][sample-browser] 功能
 
 [array-stack]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/stack/ArrayStack.java
 [linked-stack]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/stack/LinkedStack.java
+[sample-browser]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/stack/SampleBrowser.java
 
 ## 队列
 
