@@ -57,9 +57,11 @@
 
 ## 递归
 
-* 编程实现斐波那契数列求值f(n)=f(n-1)+f(n-2)
+* 编程实现 [斐波那契数列求值][fibonacci] f(n)=f(n-1)+f(n-2)
 * 编程实现求阶乘n!
 * 编程实现一组数据集合的全排列
+
+[fibonacci]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/recursion/Fibonacci.java
 
 ## 排序
 
