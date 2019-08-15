@@ -49,10 +49,11 @@
 
 * 用数组实现一个 [顺序队列][array-queue]
 * 用链表实现一个 [链式队列][linked-queue]
-* 实现一个循环队列
+* 实现一个 [循环队列][circular-queue]
 
 [array-queue]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/queue/ArrayQueue.java
 [linked-queue]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/queue/LinkedQueue.java
+[circular-queue]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/queue/CircularQueue.java
 
 ## 递归
 
