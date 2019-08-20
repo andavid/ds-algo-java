@@ -91,8 +91,10 @@
 
 ## 散列表
 
-* 实现一个基于链表法解决冲突问题的散列表
+* 实现一个 [基于链表法解决冲突问题的散列表][my-hash-map]
 * 实现一个LRU缓存淘汰算法
+
+[my-hash-map]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/hash/MyHashMap.java
 
 ## 字符串
 
