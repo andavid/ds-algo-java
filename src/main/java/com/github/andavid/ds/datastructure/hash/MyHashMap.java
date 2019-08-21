@@ -26,7 +26,7 @@ public class MyHashMap {
     return (p == null) ? null : p.value;
   }
 
-  private Node getNode(String key) {
+  public Node getNode(String key) {
     int index = hash(key);
     Node p = table[index];
 
@@ -41,13 +41,13 @@ public class MyHashMap {
     return p;
   }
 
-  public void put(String key, String value) {
+  public String put(String key, String value) {
     int index = hash(key);
     Node p = table[index];
 
     if (p == null) {
       // 槽位为空，直接添加链表头结点
-      table[index] = new Node(key, value, null);
+      table[index] = newNode(key, value, null);
       size++;
     } else {
       Node target = null;
@@ -65,13 +65,19 @@ public class MyHashMap {
 
       if (target != null) {
         // 存在 key，替换 value
+        String oldValue = target.value;
         target.value = value;
+        afterNodeAccess(target);
+        return oldValue;
       } else {
         // 不存在 key，在链表末尾添加一个结点
-        prev.next = new Node(key, value, null);
+        prev.next = newNode(key, value, null);
         size++;
       }
     }
+
+    afterNodeInsertion();
+    return null;
   }
 
   public String remove(String key) {
@@ -79,7 +85,7 @@ public class MyHashMap {
     return (node == null) ? null : node.value;
   }
 
-  private Node removeNode(String key) {
+  public Node removeNode(String key) {
     int index = hash(key);
     Node p = table[index];
 
@@ -105,6 +111,7 @@ public class MyHashMap {
           prev.next = target.next;
         }
         size--;
+        afterNodeRemoval(target);
         // 返回删除的结点
         return target;
       }
@@ -112,6 +119,14 @@ public class MyHashMap {
 
     return null;
   }
+
+  Node newNode(String key, String value, Node next) {
+    return new Node(key, value, next);
+  }
+
+  void afterNodeAccess(Node p) { }
+  void afterNodeInsertion() { }
+  void afterNodeRemoval(Node p) { }
 
   public void printAll() {
     System.out.println("size = " + size());
@@ -172,7 +187,7 @@ public class MyHashMap {
     return size == 0;
   }
 
-  private int hash(Object key) {
+  public int hash(Object key) {
     int h = key.hashCode();
     return (h ^ (h >>> 16)) % table.length;
   }
