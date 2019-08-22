@@ -48,7 +48,6 @@ public class MyHashMap {
     if (p == null) {
       // 槽位为空，直接添加链表头结点
       table[index] = newNode(key, value, null);
-      size++;
     } else {
       Node target = null;
       Node prev = null;
@@ -72,10 +71,10 @@ public class MyHashMap {
       } else {
         // 不存在 key，在链表末尾添加一个结点
         prev.next = newNode(key, value, null);
-        size++;
       }
     }
 
+    size++;
     afterNodeInsertion();
     return null;
   }
