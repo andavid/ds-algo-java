@@ -89,6 +89,12 @@
 
 [binary-search]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/search/BinarySearch.java
 
+## 跳表
+
+* 实现一个 [跳表][skip-list]
+
+[skip-list]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/skiplist/SkipList.java
+
 ## 散列表
 
 * 实现一个 [基于链表法解决冲突问题的散列表][my-hash-map]
@@ -96,11 +102,6 @@
 
 [my-hash-map]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/hash/MyHashMap.java
 [lru-cache]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/hash/LruCache.java
-
-## 字符串
-
-* 实现一个字符集，只包含a～z这26个英文字母的Trie树
-* 实现朴素的字符串匹配算法
 
 ## 二叉树
 
@@ -131,6 +132,21 @@
 * 实现Dijkstra算法、A*算法
 * 实现拓扑排序的Kahn算法、DFS算法
 
+## 字符串
+
+* 实现一个字符集，只包含a～z这26个英文字母的Trie树
+* 实现朴素的字符串匹配算法
+
+## 贪心
+
+* 霍夫曼编码
+
+## 分治
+
+* 利用分治算法求一组数据的 [逆序对个数][CountInversePairs]
+
+[CountInversePairs]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/divideandconquer/CountInversePairs.java
+
 ## 回溯
 
 * 利用回溯算法求解 [八皇后问题][EightQueen]
@@ -138,12 +154,6 @@
 
 [EightQueen]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/EightQueen.java
 [Package]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/backtracking/Package.java
-
-## 分治
-
-* 利用分治算法求一组数据的 [逆序对个数][CountInversePairs]
-
-[CountInversePairs]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/divideandconquer/CountInversePairs.java
 
 ## 动态规划
 
