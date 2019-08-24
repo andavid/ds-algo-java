@@ -99,9 +99,12 @@
 
 * 实现一个 [基于链表法解决冲突问题的散列表][my-hash-map]
 * 实现一个 [LRU缓存淘汰算法][lru-cache]
+* [一致性哈希算法][consistent-hash]
 
 [my-hash-map]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/hash/MyHashMap.java
 [lru-cache]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/hash/LruCache.java
+[consistent-hash]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/datastructure/hash/ConsistentHash.java
+
 
 ## 二叉树
 

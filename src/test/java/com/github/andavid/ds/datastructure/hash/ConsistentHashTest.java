@@ -26,7 +26,8 @@ public class ConsistentHashTest {
     hash.print();
 
     System.out.println();
-    String node = hash.get("apple");
-    System.out.println(hash.hash(node) + " --> " + node);
+    for (int i = 1; i <= 10; i++) {
+      System.out.println(i + " --> " + hash.hash(i) + " --> " + hash.get(i));
+    }
   }
 }
