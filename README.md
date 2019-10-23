@@ -139,10 +139,11 @@
 
 ## 字符串
 
-* 实现一个字符集，只包含a～z这26个英文字母的Trie树
+* 实现一个字符集，只包含a～z这26个英文字母的 [Trie 树][trie-tree]
 * 实现 [朴素的字符串匹配算法][brute-force]
 * 实现 [RK 字符串匹配算法][RK]
 
+[trie-tree]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/stringmatch/TrieTree.java
 [brute-force]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/stringmatch/BruteForce.java
 [RK]: https://github.com/andavid/ds-algo-java/blob/master/src/main/java/com/github/andavid/ds/algorithm/stringmatch/RabinKarp.java
 
