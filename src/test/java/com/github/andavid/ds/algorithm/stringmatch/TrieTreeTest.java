@@ -14,7 +14,10 @@ public class TrieTreeTest {
     trie.insert("so");
     trie.insert("see");
 
-    System.out.println(trie.find("how"));
-    System.out.println(trie.find("here"));
+    System.out.println(trie.contains("how"));
+    System.out.println(trie.contains("here"));
+
+    System.out.println(trie.search("h"));
+    System.out.println(trie.search("he"));
   }
 }

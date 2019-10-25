@@ -1,35 +1,9 @@
 package com.github.andavid.ds.algorithm.stringmatch;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TrieTree {
-  private TrieNode root = new TrieNode('/');
-
-  public void insert(String txt) {
-    if (txt == null) return;
-    TrieNode p = root;
-    char[] txtArray = txt.toCharArray();
-    for (int i = 0; i < txtArray.length; i++) {
-      int index = txtArray[i] - 'a';
-      if (p.children[index] == null) {
-        p.children[index] = new TrieNode(txtArray[i]);
-      }
-      p = p.children[index];
-    }
-    p.isEndingChar = true;
-  }
-
-  public boolean find(String pattern) {
-    if (pattern == null) return false;
-    TrieNode p = root;
-    char[] patternArray = pattern.toCharArray();
-    for (int i = 0; i < patternArray.length; i++) {
-      int index = patternArray[i] - 'a';
-      if (p.children[index] == null) {
-        return false;
-      }
-      p = p.children[index];
-    }
-    return p.isEndingChar;
-  }
 
   public class TrieNode {
     public char data;
@@ -39,4 +13,78 @@ public class TrieTree {
       this.data = data;
     }
   }
+
+  private TrieNode root = new TrieNode('/');
+
+  /**
+   * 将关键词插入到 Trie 树
+   */
+  public void insert(String word) {
+    TrieNode p = root;
+
+    for (char ch : word.toCharArray()) {
+      int index = ch - 'a';
+      if (p.children[index] == null) {
+        p.children[index] = new TrieNode(ch);
+      }
+      p = p.children[index];
+    }
+
+    p.isEndingChar = true;
+  }
+
+  /**
+   * 在 Trie 树中查询一个关键词
+   */
+  public boolean contains(String word) {
+    TrieNode p = root;
+
+    for (char ch : word.toCharArray()) {
+      int index = ch - 'a';
+      if (p.children[index] == null) {
+        return false;
+      }
+      p = p.children[index];
+    }
+
+    return p.isEndingChar;
+  }
+
+  /**
+   * 在 Trie 树中查询所有 prefix 前缀的关键词
+   */
+  public List<String> search(String prefix) {
+    List<String> list = new ArrayList<>();
+    TrieNode p = root;
+
+    for (char ch : prefix.toCharArray()) {
+      int index = ch - 'a';
+      if (p.children[index] == null) {
+        return list;
+      }
+      p = p.children[index];
+    }
+
+    search(list, p, prefix);
+
+    return list;
+  }
+
+  private void search(List<String> list, TrieNode trieNode, String prefix) {
+    if (trieNode == null) {
+      return;
+    }
+
+    if (trieNode.isEndingChar) {
+      list.add(prefix);
+      return;
+    }
+
+    for (TrieNode child : trieNode.children) {
+      if (child != null) {
+        search(list, child, prefix + child.data);
+      }
+    }
+  }
+
 }
