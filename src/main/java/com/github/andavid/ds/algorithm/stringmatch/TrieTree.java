@@ -65,12 +65,12 @@ public class TrieTree {
       p = p.children[index];
     }
 
-    search(list, p, prefix);
+    traverse(list, p, prefix);
 
     return list;
   }
 
-  private void search(List<String> list, TrieNode trieNode, String prefix) {
+  private void traverse(List<String> list, TrieNode trieNode, String prefix) {
     if (trieNode == null) {
       return;
     }
@@ -82,9 +82,16 @@ public class TrieTree {
 
     for (TrieNode child : trieNode.children) {
       if (child != null) {
-        search(list, child, prefix + child.data);
+        traverse(list, child, prefix + child.data);
       }
     }
+  }
+
+  @Override
+  public String toString() {
+    List<String> list = new ArrayList<>();
+    traverse(list, root, "");
+    return list.toString();
   }
 
 }

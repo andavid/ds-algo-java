@@ -13,6 +13,7 @@ public class TrieTreeTest {
     trie.insert("how");
     trie.insert("so");
     trie.insert("see");
+    System.out.println(trie);
 
     System.out.println(trie.contains("how"));
     System.out.println(trie.contains("here"));
