@@ -77,7 +77,6 @@ public class TrieTree {
 
     if (trieNode.isEndingChar) {
       list.add(prefix);
-      return;
     }
 
     for (TrieNode child : trieNode.children) {
