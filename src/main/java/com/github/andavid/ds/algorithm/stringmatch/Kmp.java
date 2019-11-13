@@ -22,7 +22,13 @@ public class Kmp {
         // 如果 p[k] = p[j]，next[j+1] = next[j] + 1 = k + 1
         k++;
         j++;
-        next[j] = k;
+        // next 数组的优化
+        if (pattern.charAt(k) != pattern.charAt(j)) {
+          next[j] = k;
+        } else {
+          // 如果失配时，下一跳的位置和当前位置的字符一样，肯定还是不匹配，所以需要继续往前跳
+          next[j] = next[k];
+        }
       } else {
         // 继续查找次长的相同前缀和后缀
         k = next[k];
