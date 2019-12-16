@@ -151,7 +151,9 @@
 
 ## 贪心
 
-* 霍夫曼编码
+* [霍夫曼编码][huffman]
+
+[huffman]: ./src/main/java/com/github/andavid/ds/algorithm/greedy/Huffman.java
 
 ## 分治
 
