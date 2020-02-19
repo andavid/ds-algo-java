@@ -2,8 +2,7 @@
 
 数据结构和算法必知必会的 50 个代码实现（Java）
 
-## 参考
-
+* https://github.com/andavid/ds-algo-java
 * https://github.com/wangzheng0822/algo
 * https://github.com/kkzfl22/datastruct
 
@@ -55,40 +54,6 @@
 [linked-queue]: ./src/main/java/com/github/andavid/ds/datastructure/queue/LinkedQueue.java
 [circular-queue]: ./src/main/java/com/github/andavid/ds/datastructure/queue/CircularQueue.java
 
-## 递归
-
-* 编程实现 [斐波那契数列求值][fibonacci] f(n)=f(n-1)+f(n-2)
-* 编程实现 [求阶乘n!][factorial]
-* 编程实现一组数据集合的 [全排列][permutation]
-
-[fibonacci]: ./src/main/java/com/github/andavid/ds/algorithm/recursion/Fibonacci.java
-[factorial]: ./src/main/java/com/github/andavid/ds/algorithm/recursion/Factorial.java
-[permutation]: ./src/main/java/com/github/andavid/ds/algorithm/recursion/Permutation.java
-
-## 排序
-
-* 实现 [归并排序][MergeSort]、[快速排序][QuickSort]、[插入排序][InsertionSort]、[冒泡排序][BubbleSort]、[选择排序][SelectionSort]、[希尔排序][ShellSort]、[堆排序][HeapSort]、[桶排序][BucketSort]、[计数排序][CountingSort]、[基数排序][RadixSort]
-* 编程实现O(n)时间复杂度内 [找到一组数据的第K大元素][FindKthLargest]
-
-[MergeSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/MergeSort.java
-[QuickSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/QuickSort.java
-[BubbleSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/BubbleSort.java
-[InsertionSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/InsertionSort.java
-[SelectionSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/SelectionSort.java
-[ShellSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/ShellSort.java
-[HeapSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/HeapSort.java
-[BucketSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/BucketSort.java
-[CountingSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/CountingSort.java
-[RadixSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/RadixSort.java
-[FindKthLargest]: ./src/main/java/com/github/andavid/ds/algorithm/sort/FindKthLargest.java
-
-## 二分查找
-
-* 实现一个有序数组的 [二分查找算法][binary-search]
-* 实现 [模糊二分查找算法][binary-search]（比如大于等于给定值的第一个元素）
-
-[binary-search]: ./src/main/java/com/github/andavid/ds/algorithm/search/BinarySearch.java
-
 ## 跳表
 
 * 实现一个 [跳表][skip-list]
@@ -104,7 +69,6 @@
 [my-hash-map]: ./src/main/java/com/github/andavid/ds/datastructure/hash/MyHashMap.java
 [lru-cache]: ./src/main/java/com/github/andavid/ds/datastructure/hash/LruCache.java
 [consistent-hash]: ./src/main/java/com/github/andavid/ds/datastructure/hash/ConsistentHash.java
-
 
 ## 二叉树
 
@@ -136,6 +100,49 @@
 * 实现拓扑排序的Kahn算法、DFS算法
 
 [graph]: ./src/main/java/com/github/andavid/ds/datastructure/graph/Graph.java
+
+## 递归
+
+* 编程实现 [斐波那契数列求值][fibonacci] f(n)=f(n-1)+f(n-2)
+* 编程实现 [求阶乘n!][factorial]
+* 编程实现一组数据集合的 [全排列][permutation]
+
+[fibonacci]: ./src/main/java/com/github/andavid/ds/algorithm/recursion/Fibonacci.java
+[factorial]: ./src/main/java/com/github/andavid/ds/algorithm/recursion/Factorial.java
+[permutation]: ./src/main/java/com/github/andavid/ds/algorithm/recursion/Permutation.java
+
+## 排序
+
+* [归并排序][MergeSort]
+* [快速排序][QuickSort]
+* [插入排序][InsertionSort]
+* [冒泡排序][BubbleSort]
+* [选择排序][SelectionSort]
+* [希尔排序][ShellSort]
+* [堆排序][HeapSort]
+* [桶排序][BucketSort]
+* [计数排序][CountingSort]
+* [基数排序][RadixSort]
+* 编程实现O(n)时间复杂度内 [找到一组数据的第K大元素][FindKthLargest]
+
+[MergeSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/MergeSort.java
+[QuickSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/QuickSort.java
+[BubbleSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/BubbleSort.java
+[InsertionSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/InsertionSort.java
+[SelectionSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/SelectionSort.java
+[ShellSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/ShellSort.java
+[HeapSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/HeapSort.java
+[BucketSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/BucketSort.java
+[CountingSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/CountingSort.java
+[RadixSort]: ./src/main/java/com/github/andavid/ds/algorithm/sort/RadixSort.java
+[FindKthLargest]: ./src/main/java/com/github/andavid/ds/algorithm/sort/FindKthLargest.java
+
+## 二分查找
+
+* 实现一个有序数组的 [二分查找算法][binary-search]
+* 实现 [模糊二分查找算法][binary-search]（比如大于等于给定值的第一个元素）
+
+[binary-search]: ./src/main/java/com/github/andavid/ds/algorithm/search/BinarySearch.java
 
 ## 字符串
 
